@@ -27,5 +27,3 @@ def caesar_cipher(stringInput, shift)
   return letters.join
 
 end
-
-puts caesar_cipher("Test 123", 2)

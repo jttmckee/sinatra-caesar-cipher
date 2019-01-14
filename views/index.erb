@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+  </head>
+  <body>
+    <% if cipher.size > 0 %>
+      <p>
+        Your text <%= code %>d is: <br>
+        <%= cipher %>
+      </p>
+    <% end %>
+    <form method="get">
+      Type text to encode / decode: <br>
+      <input type="text" name="input_text"> <br>
+      Type amount of shift: <br>
+      <input type="text" name="shift"> <br>
+      Choose whether to encode or decode: <br>
+      <input type="submit" name="code" value="encode">
+      <input type="submit" name="code" value="decode">
+    </form>
+  </body>
+</html>
