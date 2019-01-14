@@ -8,7 +8,8 @@ get '/' do
   text = params["input_text"]
   shift = params["shift"]
   code = params["code"]
-  if text.size > 0 && shift.size > 0 && %w{encode decode}.include?(code) then
+  if  text && text.size > 0 && shift && shift.size > 0 &&
+        %w{encode decode}.include?(code) then
       shift = code == "encode" ? shift.to_i : -shift.to_i
       cipher = caesar_cipher(text,shift)
   end
